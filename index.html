@@ -20,7 +20,7 @@
             }
         }
     </script>
-    </head>
+</head>
 
 <body>
     <div class="background-verde">
@@ -60,10 +60,16 @@
     </div>
     <section class="formulario" id="forms">
         <div class="parte_sup"></div>
-        <div class="formulario-alimentador-container text-slate-100 shadow-2xl rounded-xl p-6 md:p-8 w-full max-w-md mx-auto">
+        <div
+            class="formulario-alimentador-container text-slate-100 shadow-2xl rounded-xl p-6 md:p-8 w-full max-w-md mx-auto">
             <header class="text-center mb-8">
                 <h1 class="text-3xl font-bold text-white flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bone mr-3"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0A2.5 2.5 0 1 1 7 7a.5.5 0 0 1-.5.5 2.5 2.5 0 1 0 0 5c-.7.7 0 1.69 0 2.5a2.5 2.5 0 1 0 5 0 .5.5 0 0 1 .5.5a2.5 2.5 0 1 0 5 0A2.5 2.5 0 1 1 17 17a.5.5 0 0 1 .5-.5Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-bone mr-3">
+                        <path
+                            d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0A2.5 2.5 0 1 1 7 7a.5.5 0 0 1-.5.5 2.5 2.5 0 1 0 0 5c-.7.7 0 1.69 0 2.5a2.5 2.5 0 1 0 5 0 .5.5 0 0 1 .5.5a2.5 2.5 0 1 0 5 0A2.5 2.5 0 1 1 17 17a.5.5 0 0 1 .5-.5Z" />
+                    </svg>
                     Alimentador PET Inteligente
                 </h1>
                 <p class="text-slate-200 mt-1">Gerencie os horários de alimentação do seu pet.</p>
@@ -72,10 +78,23 @@
             <section class="mb-8">
                 <h2 class="text-xl font-semibold mb-3 text-white">Agendar Horário</h2>
                 <div class="flex items-center space-x-3 bg-slate-700 p-3 rounded-lg shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock text-slate-400"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <input type="time" id="novo-horario" class="bg-transparent text-slate-100 flex-grow p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 appearance-none" aria-label="Novo horário">
-                    <button id="btn-adicionar" class=" hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-150 ease-in-out flex items-center shadow hover:shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus mr-2"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-clock text-slate-400">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <input type="time" id="novo-horario"
+                        class="bg-transparent text-slate-100 flex-grow p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 appearance-none"
+                        aria-label="Novo horário">
+                    <button id="btn-adicionar"
+                        class=" hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-150 ease-in-out flex items-center shadow hover:shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-plus mr-2">
+                            <path d="M5 12h14" />
+                            <path d="M12 5v14" />
+                        </svg>
                         Adicionar
                     </button>
                 </div>
@@ -92,12 +111,15 @@
 
             <section>
                 <h2 class="text-xl font-semibold mb-3 text-white">Controle Manual</h2>
-                <button id="btn-despejar" class="w-full hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-md transition-colors duration-150 ease-in-out flex items-center justify-center text-lg shadow hover:shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bubbles-icon lucide-bubbles mr-2">
-                        <path d="M7.2 14.8a2 2 0 0 1 2 2"/>
-                        <circle cx="18.5" cy="8.5" r="3.5"/>
-                        <circle cx="7.5" cy="16.5" r="5.5"/>
-                        <circle cx="7.5" cy="4.5" r="2.5"/>
+                <button id="btn-despejar"
+                    class="w-full hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-md transition-colors duration-150 ease-in-out flex items-center justify-center text-lg shadow hover:shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-bubbles-icon lucide-bubbles mr-2">
+                        <path d="M7.2 14.8a2 2 0 0 1 2 2" />
+                        <circle cx="18.5" cy="8.5" r="3.5" />
+                        <circle cx="7.5" cy="16.5" r="5.5" />
+                        <circle cx="7.5" cy="4.5" r="2.5" />
                     </svg>
                     Despejar Comida Agora!
                 </button>
@@ -108,7 +130,7 @@
             <p>&copy; <span id="currentYear"></span> Projeto Alimentador PET. Interface de Exemplo.</p>
         </footer>
     </section>
-    
+
     <script src="alimentador.js"></script>
     <script src="js/main.js"></script>
 </body>
