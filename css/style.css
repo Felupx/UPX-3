@@ -21,13 +21,20 @@ body {
 :root {
     --verde-escuro: #0c3b2e;
     --verde: #6d9773;
-    --marrom: #bb8a52;
-    --amarelo: #ffba00;
     --degrade-btn: linear-gradient(#167b8b, #0f4c55);
     --color-p: #a1a1a1;
     --color-p-2: #868585;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 20px;
+}
 
 
 .background-verde {
@@ -43,6 +50,7 @@ body {
 }
 
 .btn-gradiente {
+    font-size: 20px;
     padding: 10px 25px;
     color: white;
     border: none;
@@ -75,6 +83,7 @@ nav {
 }
 
 .ul li a {
+    font-size: 20px;
     color: white;
 }
 
@@ -92,7 +101,7 @@ main .container {
 }
 
 .main-text h1 {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
 }
 
 .main-text div {
@@ -226,23 +235,62 @@ main .container {
 
 /* No seu arquivo alimentador.css ou css/style.css */
 
-#btn-despejar {
+#btn-sub {
     background-color: #167b8b; /* Exemplo: um vermelho específico para "perigo" ou ação imediata */
     color: white; /* Cor do texto */
 }
 
-#btn-despejar:hover {
+#btn-sub:hover {
     background-color: #0f4c55; /* Um tom de vermelho um pouco mais escuro para o hover */
 }
 
+
 .formulario {
     background-color: var(--verde);
-    height: 100vh;
+    padding: 60px 0px;
 }
+
 
 .parte_sup {
     padding: 80px;
 }
+
+.contato {
+    padding: 0px;
+    padding-top: 50px;
+}
+
+.scrollTop {
+    outline: none;
+    border: 0;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+}
+
+.scrollTop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scrollTop img{
+    width: 100%;
+}
+
 
 html {
     scroll-behavior: smooth;

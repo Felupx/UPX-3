@@ -7,7 +7,7 @@
     <title>ALIMENTADOURO</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="alimentador.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,17 +23,18 @@
 </head>
 
 <body>
-    <div class="background-verde">
+    <div id="home" class="background-verde">
         <header>
             <div class="container">
                 <nav>
                     <div class="logo">
+                        <img src="img/icon.png" alt="Logo site">
                         <a href="index.html">Alimentadouro</a>
                     </div>
                     <ul class="ul">
-                        <li> <a href="#"> Home </a> </li>
-                        <li> <a href="#"> Sobre </a> </li>
-                        <li> <a href="#"> Contato </a> </li>
+                        <li> <a href="#home"> Home </a> </li>
+                        <li> <a href="#sobre"> Sobre </a> </li>
+                        <li> <a href="#contato"> Contato </a> </li>
                         <li> <a href="#forms"> <button class="btn-gradiente"> Começar </button> </a> </li>
                     </ul>
                     <div class="menu-icon">
@@ -58,80 +59,128 @@
             </div>
         </main>
     </div>
-    <section class="formulario" id="forms">
-        <div class="parte_sup"></div>
-        <div
-            class="formulario-alimentador-container text-slate-100 shadow-2xl rounded-xl p-6 md:p-8 w-full max-w-md mx-auto">
-            <header class="text-center mb-8">
-                <h1 class="text-3xl font-bold text-white flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-bone mr-3">
-                        <path
-                            d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0A2.5 2.5 0 1 1 7 7a.5.5 0 0 1-.5.5 2.5 2.5 0 1 0 0 5c-.7.7 0 1.69 0 2.5a2.5 2.5 0 1 0 5 0 .5.5 0 0 1 .5.5a2.5 2.5 0 1 0 5 0A2.5 2.5 0 1 1 17 17a.5.5 0 0 1 .5-.5Z" />
-                    </svg>
-                    Alimentador PET Inteligente
-                </h1>
-                <p class="text-slate-200 mt-1">Gerencie os horários de alimentação do seu pet.</p>
-            </header>
 
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold mb-3 text-white">Agendar Horário</h2>
-                <div class="flex items-center space-x-3 bg-slate-700 p-3 rounded-lg shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-clock text-slate-400">
-                        <circle cx="12" cy="12" r="10" />
-                        <polyline points="12 6 12 12 16 14" />
-                    </svg>
-                    <input type="time" id="novo-horario"
-                        class="bg-transparent text-slate-100 flex-grow p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 appearance-none"
-                        aria-label="Novo horário">
-                    <button id="btn-adicionar"
-                        class=" hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-150 ease-in-out flex items-center shadow hover:shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-plus mr-2">
-                            <path d="M5 12h14" />
-                            <path d="M12 5v14" />
-                        </svg>
-                        Adicionar
-                    </button>
-                </div>
-            </section>
-
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold mb-3 text-white">Horários Agendados</h2>
-                <div id="lista-horarios-container" class="bg-slate-700 p-3 rounded-lg shadow min-h-[100px]">
-                    <ul id="lista-horarios" class="space-y-2">
-                    </ul>
-                    <p id="sem-horarios" class="text-slate-400 text-center py-4 hidden">Nenhum horário agendado.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-semibold mb-3 text-white">Controle Manual</h2>
-                <button id="btn-despejar"
-                    class="w-full hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-md transition-colors duration-150 ease-in-out flex items-center justify-center text-lg shadow hover:shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-bubbles-icon lucide-bubbles mr-2">
-                        <path d="M7.2 14.8a2 2 0 0 1 2 2" />
-                        <circle cx="18.5" cy="8.5" r="3.5" />
-                        <circle cx="7.5" cy="16.5" r="5.5" />
-                        <circle cx="7.5" cy="4.5" r="2.5" />
-                    </svg>
-                    Despejar Comida Agora!
-                </button>
-            </section>
+    <section id="sobre" class="py-16 lg:py-24 bg-slate-50">
+        <div class="container mx-auto px-6 lg:px-8">
+            <h2 class="text-3xl lg:text-4xl font-bold text-center text-verde-escuro mb-12">Sobre o Projeto Alimentadouro</h2>
+            <div class="max-w-3xl mx-auto text-slate-600 text-lg leading-relaxed space-y-6">
+                <p>Bem-vindo ao Alimentadouro, a solução inteligente para garantir que seu pet receba suas refeições na hora certa, todos os dias, mesmo quando você não está por perto. Nosso projeto nasceu da paixão por animais e da busca por facilitar a vida dos seus tutores.</p>
+                <p>Utilizando tecnologia simples e eficaz, o Alimentadouro permite que você agende os horários de alimentação e, com um clique, também possa liberar uma porção extra de carinho (e ração!). Acreditamos que um pet bem alimentado é um pet mais feliz e saudável.</p>
+                <p>Este painel de controle interativo foi desenhado para ser intuitivo e amigável, permitindo que você gerencie a dieta do seu companheiro de quatro patas com total tranquilidade e precisão. Explore as funcionalidades e descubra como podemos ajudar a trazer mais alegria e bem-estar para o seu lar.</p>
+            </div>
         </div>
-        <div id="toast-notification" class="toast" role="alert"></div>
-        <footer class="text-center mt-8 text-slate-700 text-sm">
-            <p>&copy; <span id="currentYear"></span> Projeto Alimentador PET. Interface de Exemplo.</p>
-        </footer>
     </section>
 
-    <script src="alimentador.js"></script>
+    <section class="formulario" id="forms">
+       
+            <div class="formulario-alimentador-container text-slate-100 shadow-2xl rounded-xl p-6 md:p-8 w-full max-w-md mx-auto">
+                <header class="text-center mb-8">
+                    <h1 class="text-3xl font-bold text-white flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-bone mr-3">
+                            <path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0A2.5 2.5 0 1 1 7 7a.5.5 0 0 1-.5.5 2.5 2.5 0 1 0 0 5c-.7.7 0 1.69 0 2.5a2.5 2.5 0 1 0 5 0 .5.5 0 0 1 .5.5a2.5 2.5 0 1 0 5 0A2.5 2.5 0 1 1 17 17a.5.5 0 0 1 .5-.5Z" />
+                        </svg>
+                        Alimentador PET Inteligente
+                    </h1>
+                    <p class="text-slate-200 mt-1">Gerencie os horários de alimentação do seu pet.</p>
+                </header>
+
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold mb-3 text-white">Agendar Horário</h2>
+                    <div class="flex items-center space-x-3 bg-slate-700 p-3 rounded-lg shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-clock text-slate-400">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <input type="time" id="novo-horario"
+                            class="bg-transparent text-slate-100 flex-grow p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 appearance-none"
+                            aria-label="Novo horário">
+                        <button id="btn-adicionar"
+                            class=" hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-150 ease-in-out flex items-center shadow hover:shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-plus mr-2">
+                                <path d="M5 12h14" />
+                                <path d="M12 5v14" />
+                            </svg>
+                            Adicionar
+                        </button>
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold mb-3 text-white">Horários Agendados</h2>
+                    <div id="lista-horarios-container" class="bg-slate-700 p-3 rounded-lg shadow min-h-[100px]">
+                        <ul id="lista-horarios" class="space-y-2">
+                        </ul>
+                        <p id="sem-horarios" class="text-slate-400 text-center py-4 hidden">Nenhum horário agendado.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold mb-3 text-white">Controle Manual</h2>
+                    <button id="btn-sub"
+                        class="w-full text-white font-bold py-3 px-4 rounded-md transition-colors duration-150 ease-in-out flex items-center justify-center text-lg shadow hover:shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-bubbles-icon lucide-bubbles mr-2">
+                            <path d="M7.2 14.8a2 2 0 0 1 2 2" />
+                            <circle cx="18.5" cy="8.5" r="3.5" />
+                            <circle cx="7.5" cy="16.5" r="5.5" />
+                            <circle cx="7.5" cy="4.5" r="2.5" />
+                        </svg>
+                        Despejar Comida Agora!
+                    </button>
+                </section>
+            </div>
+        <div id="toast-notification" class="toast" role="alert"></div>
+        
+    </section>
+
+    <section id="contato" class="contato py-16 lg:py-24 bg-slate-100">
+        <div class="container mx-auto px-6 lg:px-8">
+            <h2 class="text-3xl lg:text-4xl font-bold text-center text-verde-escuro mb-12">Fale Conosco</h2>
+            <form action="#" method="POST" class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-xl shadow-xl space-y-6">
+                <div>
+                    <label for="nome" class="block text-sm font-medium text-slate-800 mb-1">Nome Completo</label>
+                    <input type="text" name="nome" id="nome" autocomplete="name" required class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-amarelo focus:border-amarelo placeholder-slate-400 transition-shadow">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-800 mb-1">Seu Melhor Email</label>
+                    <input type="email" name="email" id="email" autocomplete="email" required class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-amarelo focus:border-amarelo placeholder-slate-400 transition-shadow">
+                </div>
+                <div>
+                    <label for="mensagem" class="block text-sm font-medium text-slate-800 mb-1">Sua Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" rows="5" required class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-amarelo focus:border-amarelo placeholder-slate-400 transition-shadow"></textarea>
+                </div>
+                <div>
+                    <button id="btn-sub" type="submit"
+                        class="w-full text-white font-bold py-3 px-4 rounded-md transition-colors duration-150 ease-in-out flex items-center justify-center text-lg shadow hover:shadow-lg">
+                        Enviar Mensagem
+                    </button>
+                </div>
+            </form>
+        </div>
+
+       
+    </section>
+
+     <footer class="py-10 bg-verde-escuro text-slate-400 text-center bg-slate-100">
+            <div class="container mx-auto px-6 lg:px-8">
+                <p class="text-sm">&copy; <span id="currentYear"></span> Projeto Alimentadouro PET. Todos os direitos reservados.</p>
+                <p class="text-xs mt-2">Interface de Exemplo com <span class="text-amarelo">&hearts;</span></p>
+            </div>
+    </footer>
+
+
+    <button class="scrollTop" onclick="backTop();">
+        <img src="img/arrow-big-up.svg" alt="">
+    </button>
+
+    
     <script src="js/main.js"></script>
 </body>
 
